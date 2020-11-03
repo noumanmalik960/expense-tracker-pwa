@@ -9,5 +9,5 @@ type Transaction = {
 };
 
 type ActionType =
-  | { type: "ADD"; payload: Transactoin }
+  | { type: "ADD"; payload: Transaction }
   | { type: "DELETE"; payload: number };
