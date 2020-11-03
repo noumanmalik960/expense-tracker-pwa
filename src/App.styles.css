@@ -34,6 +34,7 @@ body {
   text-align: center;
   background-color: white;
   margin: 20px 0;
+  padding-bottom: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
@@ -48,10 +49,10 @@ body {
   height: 80%;
   margin: auto;
 }
-.inc h3:first-child {
+.inc h3:last-child {
   color: green;
 }
-.exp h3:first-child {
+.exp h3:last-child {
   color: red;
 }
 

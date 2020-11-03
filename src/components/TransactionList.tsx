@@ -1,46 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../context/GlobalContext";
+import { Transaction } from "./Transaction";
 
 export const TransactionList = () => {
+  const { transaction } = useContext(GlobalContext);
+
   return (
     <>
       <h3 className="history-heading">History</h3>
       <ul className="list">
-        <li className="minus">
-          expense <span className="li-span">-$400</span>
-        </li>
-        <li className="plus">
-          salary <span className="li-span">+$3000</span>
-        </li>
-        <li className="minus">
-          expense <span className="li-span">-$400</span>
-        </li>
-        <li className="plus">
-          salary <span className="li-span">+$3000</span>
-        </li>
-        <li className="minus">
-          expense <span className="li-span">-$400</span>
-        </li>
-        <li className="plus">
-          salary <span className="li-span">+$3000</span>
-        </li>
-        <li className="minus">
-          expense <span className="li-span">-$400</span>
-        </li>
-        <li className="plus">
-          salary <span className="li-span">+$3000</span>
-        </li>
-        <li className="minus">
-          expense <span className="li-span">-$400</span>
-        </li>
-        <li className="plus">
-          salary <span className="li-span">+$3000</span>
-        </li>
-        <li className="minus">
-          expense <span className="li-span">-$400</span>
-        </li>
-        <li className="plus">
-          salary <span className="li-span">+$3000</span>
-        </li>
+        {transaction.map((tran: Transaction) => {
+          return <Transaction transaction={tran} key={tran.id} />;
+        })}
       </ul>
     </>
   );
