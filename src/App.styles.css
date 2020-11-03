@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  background-color: rgb(238, 238, 238);
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 10px solid black;
+}
+
+.balance {
+  display: flex;
+  flex-direction: column;
+}
+
+.balance h1,
+.balance h3 {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.inc-exp {
+  display: flex;
+  text-align: center;
+  background-color: white;
+  margin: 20px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.inc {
+  padding: 0 30px;
+  height: 80%;
+  margin: auto;
+}
+.exp {
+  padding: 0 30px;
+  border-left: 1px solid slategray;
+  height: 80%;
+  margin: auto;
+}
+.inc h3:first-child {
+  color: green;
+}
+.exp h3:first-child {
+  color: red;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 0px;
+  overflow-y: scroll;
+}
+
+.list li {
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.list li.plus {
+  border-right: 5px solid green;
+}
+.list li.minus {
+  border-right: 5px solid red;
+}
+
+.history-heading {
+  margin-bottom: 0;
+}
+.list li:hover {
+  background-color: rgb(255, 0, 0);
+  cursor: pointer;
+}
+.list li .li-span {
+  padding-left: 90px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  padding: 4px;
+  margin: 4px;
+}
+
+.add-btn {
+  margin: 4px;
+  background-color: royalblue;
+  color: white;
+  border-radius: 3px;
+  font-size: 16px;
+  width: 150px;
+}
