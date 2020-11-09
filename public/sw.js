@@ -20,18 +20,31 @@ this.addEventListener('install', (event) => {
   )
 })
 
-this.addEventListener('fetch', (event) => {
-  if (!navigator.onLine) {
-    event.respondWith(
-      caches.match(event.request).then((result) => {
-        if (result)
-          return result
-        // If its not present in cache then go fetch from api
-        let requestUrl = event.request.clone();
-        return fetch(requestUrl)
+// this.addEventListener('fetch', (event) => {
+//   if (!navigator.onLine) {
+//     event.respondWith(
+//       caches.match(event.request).then((result) => {
+//         if (result)
+//           return result
+//         // If its not present in cache then go fetch from api
+//         let requestUrl = event.request.clone();
+//         return fetch(requestUrl)
+//       })
+//     )
+//   }
+// })
+
+self.addEventListener('fetch', function (event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function (response) {
+        // cache hit
+        if (response) {
+          return response;
+        }
+        return fetch(event.request)
       })
-    )
-  }
+  )
 })
 
 self.addEventListener('activate', function (event) {
