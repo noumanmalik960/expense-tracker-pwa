@@ -3,12 +3,6 @@ const cacheName = "cache-v1"
 const urlsToCache = [
   '/',
   '/index.html',
-  // '/static/js/bundle.js',
-  // '/static/js/main.chunk.js',
-  // '/static/js/0.chunk.js',
-  // '/manifest.json',
-  // '/favicon.ico',
-  // '/logo192.png',
   '/static/css/main.c3817044.chunk.css',
   '/static/js/2.5f7689fa.chunk.js',
   '/static/js/main.7c9f7f12.chunk.js',
@@ -25,20 +19,6 @@ this.addEventListener('install', (event) => {
     })
   )
 })
-
-// this.addEventListener('fetch', (event) => {
-//   if (!navigator.onLine) {
-//     event.respondWith(
-//       caches.match(event.request).then((result) => {
-//         if (result)
-//           return result
-//         // If its not present in cache then go fetch from api
-//         let requestUrl = event.request.clone();
-//         return fetch(requestUrl)
-//       })
-//     )
-//   }
-// })
 
 self.addEventListener('fetch', function (event) {
   event.respondWith(
