@@ -9,6 +9,12 @@ const urlsToCache = [
   // '/manifest.json',
   // '/favicon.ico',
   // '/logo192.png',
+  '/static/css/main.c3817044.chunk.css',
+  '/static/js/2.5f7689fa.chunk.js',
+  '/static/js/main.7c9f7f12.chunk.js',
+  '/favicon.ico',
+  '/manifest.json',
+
 ]
 
 
