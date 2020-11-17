@@ -3,12 +3,12 @@ const cacheName = "cache-v1"
 const urlsToCache = [
   '/',
   '/index.html',
-  '/static/js/bundle.js',
-  '/static/js/main.chunk.js',
-  '/static/js/0.chunk.js',
-  '/manifest.json',
-  '/favicon.ico',
-  '/logo192.png',
+  // '/static/js/bundle.js',
+  // '/static/js/main.chunk.js',
+  // '/static/js/0.chunk.js',
+  // '/manifest.json',
+  // '/favicon.ico',
+  // '/logo192.png',
 ]
 
 
